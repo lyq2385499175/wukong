@@ -1,0 +1,88 @@
+<!--pages/appointmentTime/appointmentTime.wxml-->
+<view class='header'>
+  <image src='/images/set.jpg' bindtap='set' class='set'></image>
+  <view bindtap='cancel' class='cancel' wx:if="{{infoData.status1==0||infoData.status1==1}}">取消预约</view>
+</view>
+
+<!-- 主任 -->
+<view class='portrait'>
+  <image src='{{infoData.img}}' class='director'></image>
+  <text>{{infoData.name}}</text>
+</view>
+<!-- 地址 -->
+<view class='location'>
+  <view class='message'>
+    <view>机构：{{infoData.institution_name}}</view>
+    <view>地址：{{infoData.addr}}</view>
+    <view>电话：{{infoData.tel1}}</view>
+  </view>
+</view>
+<!-- 流程 -->
+<view class='process'>
+  <view class='kuai'>
+    <image src='{{infoData.status1==0?"/images/one.png":"/images/one.png"}}' class='follow'></image>
+    <view class='detail'>
+      <text class='top'>预约成功</text>
+      <view class='bottom'>预约日期{{infoData.create_time}}</view>
+    </view>
+  </view>
+  <view class='kuai'>
+    <image src='{{infoData.status1==1||infoData.status1==4||infoData.status1==3?"/images/one.png":"/images/hui.png"}}' class='follow'></image>
+    <view class='detail'>
+      <text class='{{infoData.status1==1||infoData.status1==4?"top":"top1"}}'>预约到店</text>
+      <view style='display:flex;'>
+        <view class='bottom'>预约到店时间</view>
+        <view style='color:#FE0000;'>{{infoData.timestamp}}</view>
+      </view>
+    </view>
+  </view>
+  <view class='kuai'>
+    <image src='{{infoData.status1==3?"/images/one.png":"/images/hui.png"}}' class='follow'></image>
+    <view class='detail'>
+      <text class='{{infoData.status1==3||infoData.status1==4?"top":"top1"}}'>完成服务</text>
+      <view class='bottom'>门店顾客较多，请您按预约时间准时到店</view>
+    </view>
+  </view>
+  <view class='kuai'>
+    <image src='{{infoData.status1==4?"/images/one1.png":"/images/huise.png"}}' class='{{infoData.status1==4?"follow":"follow1"}}'></image>
+    <view class='detail'>
+      <text class='{{infoData.status1==4?"top":"top1"}}'>服务评价</text>
+      <view class='bottom'>请您对本次服务进行评价</view>
+    </view>
+  </view>
+  <button class='btn_perform' wx:if="{{infoData.status1==0}}" bindtap='arriveTo'>导航到店</button>
+  <button class='btn_perform2' wx:if="{{infoData.update_num!=0&&infoData.status1==0}}" bindtap='changTime'>改约时间</button>
+  <button class='btn_perform1' wx:if="{{infoData.update_num==0||infoData.status1!=0}}">改约时间</button>
+  <button class='btn_perform' wx:if="{{infoData.status1==3||infoData.status1==1}}">完成服务</button>
+  <!-- <button class='btn_perform' wx:if="{{infoData.status2==0}}" bindtap='btnEvaluation'>立即评价</button> -->
+  <button class='btn_perform1' wx:if="{{infoData.status1==4}}">立即评价</button>
+  <view class="commodity_screen" bindtap="hideModal1" wx:if="{{showModalStatus1}}"></view>
+  <view animation="{{animationData1}}" class="commodity_attr_box" wx:if="{{showModalStatus1}}">
+    <view class="commodity_card">
+      <view class='immediat_textView'>
+        <text class='text_voew'>评价</text>
+      </view>
+      <view class='container'>
+        <view class='evaluate_contant'>
+          <!--外层循环控制有几个评价条目 -->
+          <block wx:for='{{evaluate_contant}}' wx:key='' wx:for-index='idx'>
+            <view class='evaluate_item'>
+              <view class='evaluate_title'>{{item}}</view>
+              <!--星星评价 -->
+              <view class='evaluate_box'>
+                <!--内层循环展示每个评价条目的星星 -->
+                <block wx:for="{{stars}}" wx:key=''>
+                  <image class="star-image" style="left: {{item*80}}rpx" src="{{scores[idx] > item ?(scores[idx]-item == 0.5?halfSrc:selectedSrc) : normalSrc}}">
+                    <view class="item" style="left:0rpx" data-score="{{item + 0.5}}" data-idx='{{idx}}' bindtap="selectLeft"></view>
+                    <view class="item" style="left:20rpx" data-score="{{item + 1}}" data-idx='{{idx}}' bindtap="selectRight"></view>
+                  </image>
+                </block>
+              </view>
+            </view>
+          </block>
+          <button class='btn_immediateEate' bindtap='bindSubmit'>确认评价</button>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

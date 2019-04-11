@@ -1,0 +1,24 @@
+<!--pages/bindphone/bindphone.wxml-->
+<view class='changeInfo'>
+ 
+ <view class='phone1'>
+  <text class='bl'> +86</text>
+  <input placeholder='请输入号码' bindinput='getPhoneValue' value='{{phone}}' maxlength='11' class='inp1'></input>
+</view>
+
+<view>
+  <view class='phone'>
+    <input placeholder='请输入验证码' bindinput='getCodeValue'  value='{{code}}' maxlength='4' class='inp2'></input>
+    <view bindtap='getVerificationCode' class='ma'  disabled='{{disabled}}'>{{codename}}</view>
+  </view>
+</view>
+
+   <view class="userinfo">
+        <button class='btn_ringup'  bindtap='info' data-idx="{{index}}" >
+      确定
+    </button>
+  </view>
+</view>
+
+
+

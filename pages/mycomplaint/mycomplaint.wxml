@@ -1,0 +1,53 @@
+<view class='header'>
+  <!-- <image src='/images/set.jpg' bindtap='set' class='set'></image> -->
+  <view> </view>
+  <view bindtap='cancel' class='cancel'>{{rightText}}</view>
+</view>
+<view class='headline'>
+  <text class='one'>投诉项目</text>
+  <view class='pitch'>
+    <view class='two' wx:for="{{serviceList}}">{{item}}</view>
+  </view>
+
+</view>
+<view class='headline'>
+  <text class='one'>其他建议</text>
+</view>
+<view>
+  <view class='textarea' name="textarea" maxlength='400'>{{result.remark}}</view>
+</view>
+<!-- 流程 -->
+<view class='process'>
+  <view class='kuai'>
+    <image src='/images/one.png' class='follow'></image>
+    <view class='detail'>
+      <text class='top'>投诉成功</text>
+      <view class='bottom'>投诉日期{{result.timestamp}}</view>
+    </view>
+  </view>
+  <view class='kuai'>
+    <image src='{{result.status1 !=0?"/images/one.png":"/images/hui.png"}}' class='follow'></image>
+    <view class='detail'>
+      <text class='{{result.status1!=0?"top":"top1"}}'>等待受理</text>
+      <view style='display:flex;'>
+        <view class='bottom'>{{result.status1==0?"请耐心等待...":"客服经理已收到您的投诉信息"}}</view>
+        <!--todo 弄成单独一行 -->
+        <view style='color:#C8C8C8;' wx:if="{{result.status1>0}}">{{result.processing_time}}</view>
+      </view>
+    </view>
+  </view>
+  <view class='kuai'>
+    <image src='{{result.status1 !=0?"/images/one.png":"/images/hui.png"}}' class='follow'></image>
+    <view class='detail'>
+      <text class='{{result.status1!=0?"top":"top1"}}'>客服沟通</text>
+      <view class='bottom'>{{result.status1==0?"请耐心等待...":"客服经理会尽快联系你"}}</view>
+    </view>
+  </view>
+  <view class='kuai'>
+    <image src='{{result.status1==2?"/images/one1.png":"/images/huise.png"}}' class='{{result.status1==4?"follow":"follow1"}}'></image>
+    <view class='detail'>
+      <text class='{{result.status1==2?"top":"top1"}}'>投诉完成</text>
+      <view class='bottom'>{{result.status1==2?"{{result.finish_time}}":"请耐心等待..."}}</view>
+    </view>
+  </view>
+</view>

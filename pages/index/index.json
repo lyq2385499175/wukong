@@ -1,0 +1,9 @@
+
+
+{
+  "navigationBarTitleText": "预约管理",
+  "disableScroll": false,
+  "usingComponents": {
+    "my-date": "../../component/date/index"
+  }
+}

@@ -1,0 +1,41 @@
+/* pages/personage/personage.wxss */
+.heade {
+  width: 100%;
+  text-align: center;
+}
+input{
+  text-align: right;
+}
+.seting {
+  width: 100%;
+  padding: 20rpx;
+  font-size: 35rpx;
+  font-family: PingFang-SC-Regular;
+  font-weight: 400;
+  color: #999999;
+  box-sizing: border-box;
+}
+.sets {
+  width: 95%;
+  padding-right: 30rpx;
+  padding-bottom: 20rpx;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 3rpx solid ghostwhite;
+  margin-top: 20rpx;
+}
+.sets image{
+  width: 10%;
+  height: 65rpx;
+ border-radius: 50%;
+}
+.change{
+ width:678rpx;
+height:88rpx;
+background:linear-gradient(0deg, rgba(247, 2, 12, 1) 0%, rgba(246, 80, 87, 1) 100%);
+border-radius:14rpx;
+color:#fff;
+font-size:35rpx;
+margin-top:670rpx;
+
+}

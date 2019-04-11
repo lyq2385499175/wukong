@@ -1,0 +1,59 @@
+<!--pages/changed/changed.wxml-->
+<!-- 头部 -->
+<view class='head_changed'>
+  <view bindtap='protocol5'>设置</view>
+  <!-- <view class='yu'>预约</view> -->
+  <view class='cancel'>取消预约</view>
+</view>
+<!-- 主任 -->
+<view class='portrait'>
+  <image src='/images/director.png' class='director'></image>
+  <text>张主任</text>
+</view>
+<!-- 地址 -->
+<view class='location'>
+  <view class='message'>
+    <view>机构：北京痘博士建外店</view>
+    <view>地址：保定市区裕华西路646号</view>
+    <view>电话：40015252</view>
+  </view>
+</view>
+<!-- 流程 -->
+<view class='process'>
+  <view class='kuai'>
+    <image src='/images/one.png' class='follow'></image>
+    <view class='detail'>
+      <text class='top'>预约成功</text>
+      <view class='bottom'>预约日期2018年02月23日</view>
+    </view>
+  </view>
+  <view class='kuai'>
+    <image src='/images/one.png' class='follow'></image>
+    <view class='detail'>
+      <text class='top'>预约到店</text>
+      <view style='display:flex;'>
+        <view class='bottom'>预约到店时间</view>
+        <view style='color:#FE0000;'>2018年02月24日 下午14:00</view>
+      </view>
+    </view>
+  </view>
+  <view class='kuai'>
+    <image src='/images/one.png' class='follow'></image>
+    <view class='detail'>
+      <text class='top'>完成服务</text>
+      <view class='bottom'>门店顾客较多，请您按预约时间准时到店</view>
+    </view>
+  </view>
+  <view class='kuai'>
+    <image src='/images/one.png' class='follow'></image>
+    <view class='detail'>
+      <text class='top'>服务评价</text>
+      <view class='bottom'>请您对本次服务进行评价</view>
+    </view>
+  </view>
+
+
+  <button class='btn_navigation'>导航到店</button>
+  <button class='btn_amend'bindtap='protocol4'>改约时间</button>
+
+</view>

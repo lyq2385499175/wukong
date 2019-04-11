@@ -1,0 +1,83 @@
+/* pages/changephone/changePhone.wxss */
+
+.header {
+  width: 100%;
+  padding: 20rpx;
+  box-sizing: border-box;
+  background: rgba(248, 248, 248, 1);
+}
+
+.header .one {
+  font-size: 35rpx;
+  font-family: PingFang-SC-Bold;
+  font-weight: bold;
+  color: rgba(51, 51, 51, 1);
+  padding: 10rpx;
+}
+
+.header .two {
+  font-size: 27rpx;
+  font-family: PingFang-SC-Regular;
+  font-weight: 400;
+  color: rgba(60, 60, 60, 1);
+  margin-left: 170rpx;
+  padding: 10rpx;
+}
+
+.phone1 {
+  width: 100%;
+  height: 100rpx;
+  display: flex;
+  align-items: center;
+  border-bottom: 1rpx solid rgba(221, 218, 218, 1);
+}
+
+.phone {
+  width: 100%;
+  height: 100rpx;
+  display: flex;
+  align-items: center;
+  border-bottom: 1rpx solid rgba(221, 218, 218, 1);
+}
+
+.inp1 {
+  width: 443rpx;
+  margin-right: 0;
+  padding: 20rpx;
+  font-size: 35rpx;
+  text-align: left;
+}
+
+.inp2 {
+  width: 478rpx;
+  padding: 20rpx;
+  font-size: 35rpx;
+  margin-left: 153rpx;
+  text-align: left;
+}
+
+.chang {
+  width: 678rpx;
+  height: 88rpx;
+  background: linear-gradient(0deg, rgba(247, 2, 12, 1) 0%, rgba(246, 80, 87, 1) 100%);
+  border-radius: 14rpx;
+  color: #fff;
+  font-size: 35rpx;
+  margin-top: 180rpx;
+}
+
+.bl {
+  width: 17%;
+  padding: 12rpx;
+}
+
+.ma {
+  width: 290rpx;
+  padding: 30rpx;
+  font-size: 30rpx;
+  font-family: PingFang-SC-Bold;
+  font-weight: bold;
+  color: rgba(51, 51, 51, 1);
+  border-left: 1rpx solid rgba(221, 218, 218, 1);
+  text-align: center;
+}

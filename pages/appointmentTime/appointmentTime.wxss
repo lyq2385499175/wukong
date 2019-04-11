@@ -1,0 +1,281 @@
+/* pages/appointmentTime/appointmentTime.wxss */
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10rpx;
+  box-sizing: border-box;
+}
+
+.set {
+  width: 10%;
+  height: 60rpx;
+  margin-left: 0;
+}
+.cancel {
+  font-size: 24rpx;
+  font-family: PingFang-SC-Regular;
+  font-weight: 400;
+  color: rgba(142, 144, 145, 1);
+}
+.portrait {
+  width: 100%;
+  height: 243rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.portrait text {
+  font-size: 25rpx;
+  color: blue;
+  margin-top: 5rpx;
+}
+
+.director {
+  width: 159rpx;
+  height: 159rpx;
+  border-radius:50%;
+  background: red;
+
+}
+
+.location {
+  width: 100%;
+  background: rgba(248, 248, 248, 1);
+}
+
+.location .message {
+  padding: 30rpx 60rpx 30rpx 60rpx;
+  font-size: 30rpx;
+  font-family: PingFangSC-Regular;
+  font-weight: 400;
+  color: rgba(50, 50, 50, 1);
+}
+
+.process {
+  margin-top: 27rpx;
+}
+
+.kuai {
+  display: flex;
+  height: 112rpx;
+  font-size: 30rpx;
+  margin-left: 15%;
+}
+
+.follow {
+  width: 34rpx;
+  height: 112rpx;
+  margin-right: 10rpx;
+}
+
+.follow1 {
+  width: 34rpx;
+  height: 32rpx;
+  margin-right: 10rpx;
+  margin-top: 5rpx;
+}
+
+.detail {
+  width: 100%;
+  height: 63rpx;
+  margin-left: 21rpx;
+}
+
+.top {
+  font-family: PingFangSC-Regular;
+  font-weight: bold;
+  color: rgba(254, 114, 0, 1);
+}
+
+.top1 {
+  font-family: PingFangSC-Regular;
+  font-weight: bold;
+  color: #a7a7a7;
+}
+
+.bottom {
+  font-size: 26rpx;
+  font-family: PingFangSC-Regular;
+  color: #a7a7a7;
+}
+
+.btn_perform {
+  width: 678rpx;
+  height: 88rpx;
+  background: linear-gradient(0deg, rgba(247, 2, 12, 1) 0%, rgba(246, 80, 87, 1) 100%);
+  border-radius: 14rpx;
+  color: #fff;
+  font-size: 35rpx;
+  margin-top: 18rpx;
+}
+
+.btn_perform1 {
+  width: 678rpx;
+  height: 88rpx;
+  background: #ccc;
+  border-radius: 14rpx;
+  color: #fff;
+  font-size: 35rpx;
+  margin-top: 18rpx;
+}
+.btn_perform2 {
+  width: 678rpx;
+  height: 88rpx;
+  background: #F97D41;
+  border-radius: 14rpx;
+  color: #fff;
+  font-size: 35rpx;
+  margin-top: 18rpx;
+}
+/* 评价部分 */
+
+.btn_immediate {
+  width: 678rpx;
+  height: 88rpx;
+  background: linear-gradient(0deg, rgba(247, 2, 12, 1) 0%, rgba(246, 80, 87, 1) 100%);
+  border-radius: 14rpx;
+  color: #fff;
+  margin-top: 90rpx;
+  font-size: 35rpx;
+}
+
+/*使屏幕变暗  */
+
+.commodity_screen {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #000;
+  opacity: 0.2;
+  overflow: hidden;
+  z-index: 1000;
+  color: #fff;
+}
+
+/*对话框 */
+
+.commodity_attr_box {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 2000;
+  top: 315rpx;
+}
+
+.commodity_attr_box .commodity_card {
+  width: 100%;
+  height: 630rpx;
+  background: #fff;
+  position: relative;
+  top: 262rpx;
+  font-size: 30rpx;
+}
+
+.immdeiate_text {
+  width: 100%;
+  height: 120rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.immediate_view {
+  margin-left: 58rpx;
+  margin-top: 55rpx;
+}
+
+.immediat_textView {
+  width: 100%;
+  height: 80rpx;
+  color: #8e9091;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.text_voewtext_voew {
+  width: 62rpx;
+  height: 30rpx;
+  font-size: 32rpx;
+  font-family: PingFangSC-Medium;
+  font-weight: 500;
+  color: rgba(60, 60, 60, 1);
+}
+
+.btn_immediateEate {
+  width: 678rpx;
+  height: 88rpx;
+  background: linear-gradient(0deg, rgba(247, 2, 12, 1) 0%, rgba(246, 80, 87, 1) 100%);
+  border-radius: 15rpx;
+  color: #fff;
+  margin-top: 60rpx;
+  font-size: 35rpx;
+}
+
+/*星星评价的每个图片 */
+
+.container .evaluate_contant .evaluate_item .evaluate_box .star-image {
+  position: absolute;
+  width: 40rpx;
+  height: 40rpx;
+  src: "http://pic25.photophoto.cn/20121221/0005018616515359_b.jpg";
+}
+
+/*星星的左边和右边区域<点击左边半个星星，点击右边整个星星> */
+
+.container .evaluate_contant .evaluate_item .evaluate_box .star-image .item {
+  position: absolute;
+  top: 0rpx;
+  width: 20rpx;
+  height: 40rpx;
+}
+
+.evaluate_contant {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.evaluate_box {
+  width: 100%;
+  display: flex;
+}
+
+/*评价区域 */
+
+.container .evaluate_contant .evaluate_item {
+  font-size: 30rpx;
+  color: gray;
+  margin-left: 60rpx;
+  margin-top: 30rpx;
+}
+
+/*评价标题 */
+
+.container .evaluate_contant .evaluate_item .evaluate_title {
+  display: inline-block;
+}
+
+/*评价盒子 */
+
+.container .evaluate_contant .evaluate_item .evaluate_box {
+  position: absolute;
+  left: 220rpx;
+  width: 100%;
+  display: inline-block;
+}
+
+.container {
+  padding: 0;
+  margin-top: 70rpx;
+}

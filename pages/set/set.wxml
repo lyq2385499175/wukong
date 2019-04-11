@@ -1,0 +1,23 @@
+<!--pages/set/set.wxml-->
+
+<!-- <view class='heade'>
+  <view>设置</view>
+</view> -->
+
+<view class='seting'>
+  <view class='sets' bindtap='protocol6'>
+    <text>个人中心</text>
+    <image src='/images/ji.png' class='ji'></image> </view>
+  <view class='sets' bindtap='appointment'>
+    <text>投诉</text>
+    <image src='/images/ji.png' class='ji'></image> </view>
+  <view class='sets' bindtap='protocol8'>
+    <text>更换手机号</text>
+    <image src='/images/ji.png' class='ji'></image> </view>
+  <view class='sets' bindtap='clear'>
+    <text>清除缓存</text>
+   <image src='/images/ji.png' class='ji'></image></view>
+</view>
+<view>
+  <button class='btn_navigation' bindtap='logout'>退出登录</button>
+</view>

@@ -1,0 +1,19 @@
+<!--pages/changephone/changePhone.wxml-->
+<view class='header'>
+  <text class='one'>当前手机号{{phoneNum}}</text>
+  <view class='two'>更换手机号后，下次登录可使用新号码登录</view>
+</view>
+<view class='phone1'>
+  <text class='bl'> +86</text>
+  <input placeholder='请输入号码' bindinput='getMobile' class='inp1' maxlength='11'></input>
+</view>
+
+<view>
+  <view class='phone'>
+    <input placeholder='请输入验证码' bindinput='getCode' class='inp2' maxlength='4'></input>
+    <view bindtap='getIdentifyCode' class='ma' disabled='{{disabled}}'>{{codename}}</view>
+  </view>
+
+</view>
+
+<button bindtap='changeMobile' class='chang'>确定更换</button>

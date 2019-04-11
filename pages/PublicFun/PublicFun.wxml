@@ -1,0 +1,64 @@
+<!--pages/PublicFun/PublicFun.wxml-->
+<!--wxml-->
+<view class='wrap'>
+  <view class='headline'>
+    <text class='one'>服务类目<text class='two'>（多选）</text></text>
+  </view>
+  <view class='checkbox-con'>
+    <checkbox-group bindchange="checkboxChange">
+      <label class="{{item.checked?'checkbox checked':'checkbox'}}" wx:for="{{checkboxArr}}" bindtap='checkbox' data-index="{{index}}" data-state='{{item.checked}}' wx:key="item.name">
+        <checkbox value="{{item.name}}" checked="{{item.checked}}" />{{item.name}}
+      </label> 
+    </checkbox-group>
+    <!-- <button type='primary' bindtap='confirm'>提交</button> -->
+  </view>
+</view>    
+<view class='wrap'>
+  <view class='headline'>
+    <text class='one'>治疗类目<text class='two'>（多选）</text></text>
+  </view>
+  <view class='checkbox-con'>
+    <checkbox-group bindchange="checkboxChange2">
+      <label class="{{item.checked?'checkbox checked':'checkbox'}}" wx:for="{{checkboxArr2}}" bindtap='checkbox2' data-index="{{index}}" wx:key="item.name">
+        <checkbox value="{{item.name}}" checked="{{item.checked}}" />{{item.name}}
+      </label>
+    </checkbox-group>
+  </view>
+</view>
+
+<view class='wrap'>
+  <view class='headline'>
+    <text class='one'>人员类目<text class='two'>（单选）</text></text>
+  </view>
+  <view class='checkbox-con'>
+    <checkbox-group bindchange="checkboxChange2">
+      <label class="{{item.checked?'checkbox checked':'checkbox'}}" wx:for="{{checkboxArr3}}" bindtap='checkbox4' data-index="{{index}}" wx:key="item.name">
+        <checkbox value="{{item.name}}" checked="{{item.checked}}" />{{item.name}}
+      </label>
+    </checkbox-group>
+  </view>
+</view>
+
+<view class='wrap'> 
+  <view class='headline'>
+    <text class='one'>状态<text class='two'>（单选）</text></text>
+  </view>
+  <view class='checkbox-con'>
+    <checkbox-group bindchange="checkboxChange2">
+      <label class="{{item.checked?'checkbox checked':'checkbox'}}" wx:for="{{list3}}" bindtap='checkbox3' data-index="{{index}}" wx:key="item.name">
+        <checkbox value="{{item.name}}" checked="{{item.checked}}" />{{item.name}}
+      </label>
+    </checkbox-group>
+  </view>
+</view>
+
+
+<view class='headline'>
+  <text class='one'>更多建议<text class='two'>（400字）</text></text>
+</view>
+<view>
+  <textarea placeholder="以上没有您要投诉的项目，或添加其他建议" value='{{text}}' name="textarea" bindinput='inText' maxlength='400' />
+</view>
+<button bindtap='sub' class='sub'>提交</button>
+
+<!-- <view bindtap='protocol'>我的投诉</view> -->

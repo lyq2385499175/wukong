@@ -1,0 +1,71 @@
+<!--pages/amendtheTreaty/amendtheTreaty.wxml-->
+<view class='shop'>
+  <view class='shopList'>
+    <text class='dian'> 您已预约{{infoData.institution_name}}</text>
+    <text class='hei'>{{infoData.timestamp}}</text>
+    <view class='phone'>
+      <text> 若确认改约其他时间</text>
+      <text>将以最后一次确认时间为准（您还有{{infoData.update_num}}次改约机会）</text>
+    </view>
+  </view>
+  <view class='view_Images' wx:if="{{statusData.status==1}}">
+    <image src='{{infoData.img}}' class='viewImages'></image>
+    <text class="text_image">{{infoData.name}}</text>
+  </view>
+</view>
+<view class='data'>选择预约日期
+  <text class='may'>(7日内可约）</text>
+</view>
+
+
+<!--选项卡标题  -->
+<scroll-view>
+  <block wx:for="{{dataList}}" wx:key="{{item.day}}" class="block">
+    <view class="scroll-view-item_H  {{index==currentTab?'on':''}}" bindtap="swichNav" data-date='{{item.date}}'>
+      <view data-current="{{index}}" style='font-size:40rpx;'>{{item.day}}</view>
+      <view data-current="{{index}}">{{item.month}}月</view>
+      <view data-current="{{index}}"> 星期{{item.week}}</view>
+    </view>
+  </block>
+</scroll-view>
+
+<!-- 选项卡内容 -->
+<swiper current="{{cur}}" data-date='{{item.date}}' class="swiper-box" duration="300" bindchange="bindChange" style="height:650rpx">
+  <!-- 全部订单 内容 -->
+  <block wx:for="{{dataList}}" wx:key="{{item.day}}">
+    <swiper-item>
+      <scroll-view>
+        <view class='subscribe'>
+          <!-- 上午 -->
+          <view class='left'>
+            <view class='time'>
+              上午
+            </view>
+            <block wx:for="{{item.list}}" wx:for-item="v">
+              <view class='olock' wx:if="{{v.time<=12}}">
+                <text class='dot'>{{v.time}}:00</text>
+                <view class='make'>
+                  <text class='{{v.state?"full":"noFull"}}' bindtap='order' data-date='{{item.date+" "+v.time+":00"}}' data-state='{{v.state}}'>{{v.state?'满员':'改约'}}</text>
+                </view>
+              </view>
+            </block>
+          </view>
+          <!-- 下午 -->
+          <view class='right'>
+            <view class='time'>
+              下午
+            </view>
+            <block wx:for="{{item.list}}" wx:for-item="v">
+              <view class='olock' wx:if="{{v.time>12}}">
+                <text class='dot'>{{v.time}}:00</text>
+                <view class='make'>
+                  <text class='{{v.state?"full":"noFull"}}' bindtap='order' data-date='{{item.date+" "+v.time+":00"}}' data-state='{{v.state}}'>{{v.state?'满员':'改约'}}</text>
+                </view>
+              </view>
+            </block>
+          </view>
+        </view>
+      </scroll-view>
+    </swiper-item>
+  </block>
+</swiper>

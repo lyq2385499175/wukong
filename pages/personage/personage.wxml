@@ -1,0 +1,29 @@
+<!--pages/personage/personage.wxml-->
+<!-- <view class='heade'>
+  <view>个人信息</view>
+</view> -->
+<view class='seting'>
+  <view class='sets'>
+    <text>头像</text>
+    <image src='{{imgPath}}' id="name" bindtap='changeImage'></image>
+  </view>
+  <view class='sets'>
+    <text>姓名</text> 
+    <input value='{{userInfo.name}}' bindinput='bindInput'></input>
+    <!-- <text>{{userInfo.name}}</text> -->
+  </view>
+  <view class='sets'>
+    <text>性别</text>
+    <picker bindchange="bindPickerChange" value="{{index}}" range="{{sex}}">
+      <view class="picker">{{sex[userInfo.sex]}}</view>
+    </picker>
+  </view>
+  <view class='sets'>
+    <text>出生日期</text>
+    <picker mode="date" value="{{userInfo.brithday}}" start="1800-09-01" end="2019-09-01" bindchange="bindDateChange">
+      <view class="picker"> {{userInfo.brithday}}</view>
+    </picker>
+    <!-- <text>{{userInfo.brithday}}</text> -->
+  </view>
+  <button bindtap='change' class='change'>保存</button>
+</view>

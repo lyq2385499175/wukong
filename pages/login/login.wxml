@@ -1,0 +1,27 @@
+<!--pages/b/b.wxml-->
+<view class='logo'>
+  <image src='/images/logo.png'></image>
+</view>
+<view class='changeInfo'>
+  <label class='lable'>手机号</label>
+  <view class='changeInfoName'>
+    <input placeholder='请输入手机号' bindinput='getPhoneValue' value='{{phone}}' maxlength='11' />
+  </view>
+  
+  <label class='lable' style="margin-top:20rpx;">验证码</label>
+  <view class='changeInfoNameList'>
+    <input placeholder='请输入验证码' bindinput='getCodeValue' value='{{val}}' style='width:70%;' maxlength='4'/>
+    <button class='codeBtn' bindtap='getVerificationCode' disabled='{{disabled}}'>{{codename}}</button>
+  </view>
+  <view class="userinfo" >
+    <!-- bindgetuserinfo -->
+    <button class='btn_ringup'  bindtap='info' data-idx="{{index}}" >
+      确认登录
+    </button>
+  </view>
+  <view class='wxLogin' bindtap='protocol'>
+    <button wx:if="{{canIUse}}" open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="bindGetUserInfo" type="{{buttonType}}"></button>
+    <image src='/images/wx_1@2x.png'></image>
+    <view style='width:100%;font-size:25rpx;color:rgba(153,153,153,1);text-align:center;'>微信登录</view>
+  </view>
+</view>

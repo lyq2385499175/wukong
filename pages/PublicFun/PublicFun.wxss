@@ -1,0 +1,114 @@
+/* pages/PublicFun/PublicFun.wxss */
+
+.headline {
+  width: 100%;
+  padding: 0 50rpx 0 50rpx;
+  box-sizing: border-box;
+}
+
+.headline .one {
+  font-size: 35rpx;
+  font-family: PingFangSC-Medium;
+  font-weight: 500;
+  color: rgba(60, 60, 60, 1);
+}
+
+.headline .two {
+  font-size: 28rpx;
+  font-family: PingFangSC-Medium;
+  font-weight: 500;
+  color: gray;
+}
+
+/* wxss */
+.wrap {
+  width: 100%;
+  /* margin: 50rpx auto */
+}
+
+.checkbox-con {
+  margin-top: 40rpx;
+ margin-left:30rpx
+}
+
+.checkbox {
+  width: 213rpx;
+  line-height: 72rpx;
+  font-size: 28rpx;
+  border: 1rpx solid rgba(248, 248, 248, 1);
+  display: inline-block;
+  margin: 0 10rpx 20rpx 0;
+  position: relative;
+  font-family: PingFangSC-Regular;
+  font-weight: 400;
+  color: rgba(60, 60, 60, 1);
+  background: rgba(248, 248, 248, 1);
+  border-radius: 10rpx;
+  text-align: center;
+}
+
+.checkbox2 {
+  width: 200rpx;
+  line-height: 72rpx;
+  font-size: 28rpx;
+  border: 1rpx solid rgba(248, 248, 248, 1);
+  display: inline-block;
+  margin: 0 10rpx 20rpx 0;
+  position: relative;
+  font-family: PingFangSC-Regular;
+  font-weight: 400;
+  color: rgba(60, 60, 60, 1);
+  background: rgba(248, 248, 248, 1);
+  border-radius: 10rpx;
+}
+
+.checked {
+  font-family: PingFangSC-Regular;
+  font-weight: bold;
+  color: rgba(255, 255, 255, 1);
+  background: linear-gradient(0deg, rgba(247, 2, 12, 1) 0%, rgba(246, 80, 87, 1) 100%);
+  border-radius: 10rpx;
+}
+
+.checked2 {
+  font-family: PingFangSC-Regular;
+  font-weight: bold;
+  color: rgba(255, 255, 255, 1);
+  background: linear-gradient(0deg, rgba(247, 2, 12, 1) 0%, rgba(246, 80, 87, 1) 100%);
+  border-radius: 10rpx;
+}
+
+.checkbox checkbox {
+  display: none;
+}
+.checked-img {
+  width: 28rpx;
+  height: 28rpx;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.sub {
+  width: 93%;
+  font-family: PingFangSC-Regular;
+  font-weight: bold;
+  color: rgba(255, 255, 255, 1);
+  background:linear-gradient(0deg,rgba(247,2,12,1) 0%,rgba(246,80,87,1) 100%);
+  border-radius:10rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 35rpx;
+  margin-top: 30rpx;
+   margin-bottom: 30rpx;
+}
+textarea{
+  width: 690rpx;
+  margin: 30rpx auto;
+  background: #F2F2F2;
+  border-radius: 10rpx;
+  padding: 30rpx;
+  font-size: 24rpx;
+  color: #666;
+  box-sizing: border-box
+}

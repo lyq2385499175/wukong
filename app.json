@@ -1,0 +1,33 @@
+{
+  "pages": [
+    "pages/login/login",
+    "pages/a/a",
+    "pages/b/b",
+    "pages/c/c",
+    "pages/index/index",
+    "template/loading/index",
+    "pages/changed/changed",
+    "pages/logs/logs",
+    "pages/ImmediateEvaluation/ImmediateEvaluation",
+    "pages/appointmentTime/appointmentTime",
+    "pages/amendtheTreaty/amendtheTreaty",
+    "pages/PublicFun/PublicFun",
+    "pages/mycomplaint/mycomplaint",
+    "pages/set/set",
+    "pages/personage/personage",
+    "pages/bindphone/bindphone",
+    "pages/test/test",
+    "pages/changePhone/changePhone"
+  ],
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示"
+    }
+  },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  }
+}
